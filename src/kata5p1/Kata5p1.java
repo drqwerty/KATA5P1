@@ -34,6 +34,9 @@ public class Kata5p1 {
                     + resultset.getString(4));
         }
 
+        query = "CREATE TABLE IF NOT EXISTS MAIL ('Id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Mail' TEXT NOT NULL)";
+        statement.execute(query);
+
         resultset.close();
         statement.close();
         connection.close();
